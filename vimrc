@@ -29,6 +29,9 @@ set guifont=Monaco\ 10
 set laststatus=2
 set number
 
+" ack for ubuntu/linux only
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 let g:rails_ctags_arguments='--exclude="*.*.js" /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/activeresource-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/actionmailer-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.10'
 set statusline=%f[%{GitBranch()}]%#StatusLine#
 
