@@ -12,6 +12,12 @@ colorscheme molokai
 syntax on
 " set smartindent
 
+" transparency effect for macvim
+if has("gui_macvim")
+  set transp=8
+end
+
+
 " Load matchit (% to bounce from do to end, etc.)
 " runtime! macros/matchit.vim
 filetype on           " Enable filetype detection
