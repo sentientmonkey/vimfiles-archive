@@ -13,9 +13,12 @@ syntax on
 " set smartindent
 
 " transparency effect for macvim
-if has("gui_macvim")
-  set transp=8
-end
+"if has("gui_macvim")
+"  set transp=8
+"end
+
+" 'follow' mode
+nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
 
 " Load matchit (% to bounce from do to end, etc.)
@@ -35,6 +38,10 @@ set guifont=Monaco\ 10
 set laststatus=2
 set number
 
+if has("gui_macvim")
+  set guifont=Monaco:h12
+end
+
 " ack for ubuntu/linux only
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
@@ -51,6 +58,10 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+"map tab up/down keys for mvim
+nmap <D-Right> :tabNext<cr>
+nmap <D-Left> :tabprevious<cr>
 
 if has("gui_running")
   winsize 180 48
