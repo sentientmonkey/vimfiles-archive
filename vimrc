@@ -17,7 +17,6 @@ if has("gui_macvim")
   set transp=8
 end
 
-
 " Load matchit (% to bounce from do to end, etc.)
 " runtime! macros/matchit.vim
 filetype on           " Enable filetype detection
@@ -38,7 +37,7 @@ set number
 " ack for ubuntu/linux only
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-let g:rails_ctags_arguments='--exclude="*.*.js" /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/activeresource-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/actionmailer-2.3.10 /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.10'
+let g:rails_ctags_arguments="--exclude='*.*.js' `bundle --verbose list | grep gemspec | cut -d' ' -f5 | sed 's/specifications/gems/' | sed 's/\.gemspec//'`"
 set statusline=%f[%{GitBranch()}]%#StatusLine#
 
 augroup mkd
@@ -55,4 +54,5 @@ vmap <C-Down> ]egv
 if has("gui_running")
   winsize 180 48
   winpos 100 50
+  set showtabline=2
 end
