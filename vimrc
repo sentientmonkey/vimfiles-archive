@@ -37,6 +37,10 @@ set guifont=Monaco\ 10
 set laststatus=2
 set number
 
+" show real tabs (so we can destroy them!
+set list
+set listchars:tab:->
+
 if has("gui_macvim")
   set guifont=Monaco:h12
 end
