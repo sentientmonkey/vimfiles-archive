@@ -34,3 +34,6 @@
 [submodule "bundle/textile.vim"]
 	path = bundle/textile.vim
 	url = https://github.com/zorab47/textile.vim
+[submodule "bundle/vim-bundler"]
+	path = bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
