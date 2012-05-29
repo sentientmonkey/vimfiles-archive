@@ -28,9 +28,6 @@
 [submodule "bundle/scss-syntax"]
 	path = bundle/scss-syntax
 	url = https://github.com/cakebaker/scss-syntax.vim
-[submodule "bundle/git-vim"]
-	path = bundle/git-vim
-	url = https://github.com/motemen/git-vim
 [submodule "bundle/textile.vim"]
 	path = bundle/textile.vim
 	url = https://github.com/zorab47/textile.vim
@@ -40,3 +37,6 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
