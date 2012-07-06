@@ -2,6 +2,9 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+
 let g:molokai_original=1
 colorscheme molokai
 "colorscheme fruity
@@ -49,7 +52,8 @@ end
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 let g:rails_ctags_arguments="--exclude='*.*.js' `bundle --verbose list | grep gemspec | cut -d' ' -f5 | sed 's/specifications/gems/' | sed 's/\.gemspec//'`"
-set statusline=%f[%{GitBranch()}]%#StatusLine#
+" set statusline=%f[%{GitBranch()}]%#StatusLine#
+ set statusline=%f%{fugitive#statusline()}%#StatusLine#
 
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
