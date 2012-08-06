@@ -27,9 +27,11 @@ filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
 set wildmenu
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+autocmd FileType ruby :setlocal sw=2 ts=2 sts=2
+autocmd FileType javascript :setlocal sw=2 ts=2 sts=2
 set smarttab
 set expandtab
 set noeb
@@ -48,8 +50,11 @@ end
 " ack for ubuntu/linux only
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-let g:rails_ctags_arguments="--exclude='*.*.js' `bundle --verbose list | grep gemspec | cut -d' ' -f5 | sed 's/specifications/gems/' | sed 's/\.gemspec//'`"
-set statusline=%f[%{GitBranch()}]%#StatusLine#
+" let g:rails_ctags_arguments="--exclude='*.*.js' `bundle --verbose list | grep gemspec | cut -d' ' -f5 | sed 's/specifications/gems/' | sed 's/\.gemspec//'`"
+let g:rails_ctags_arguments="--exclude='*.*.js'"
+
+" set statusline=%f[%{GitBranch()}]%#StatusLine#
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}\ %#StatusLine#%=%-14.(%l,%c%V%)\ %P
 
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
