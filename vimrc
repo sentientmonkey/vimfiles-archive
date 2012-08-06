@@ -2,6 +2,9 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+
 let g:molokai_original=1
 colorscheme molokai
 "colorscheme fruity
@@ -39,9 +42,10 @@ set guifont=Monaco\ 10
 set laststatus=2
 set number
 
-" show real tabs (so we can destroy them!
+" show real tabs and trailing whitespace (so we can destroy them!)
 set list
-set listchars:tab:->
+set listchars:tab:->,trail:·
+match Error /\s\+$/
 
 if has("gui_macvim")
   set guifont=Monaco:h12
