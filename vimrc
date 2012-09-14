@@ -75,6 +75,9 @@ vmap <C-Down> ]egv
 nmap <D-Right> :tabNext<cr>
 nmap <D-Left> :tabprevious<cr>
 
+"map ctl-t to command-t
+map <C-t> :CommandT<cr>
+
 if has("gui_running")
   winsize 180 48
   winpos 100 50
