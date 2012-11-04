@@ -76,7 +76,13 @@ nmap <D-Right> :tabNext<cr>
 nmap <D-Left> :tabprevious<cr>
 
 "map ctl-t to command-t
-map <C-t> :CommandT<cr>
+"map <C-t> :CommandT<cr>
+
+" map ,t to run tests with color
+map ,t :w\|:!rspec --color %<cr>
+
+" toggle hlsearch with enter
+noremap <cr> :set hlsearch!<cr>
 
 if has("gui_running")
   winsize 180 48
