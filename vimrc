@@ -5,6 +5,12 @@ call pathogen#helptags()
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 
+" screen
+let g:ScreenImpl='Tmux' 
+noremap <leader>S :ScreenShell " Open a shell/repl
+vnoremap <leader>s :ScreenSend<CR> " send current visual selection to a shell/repl
+noremap <leader>s :ScreenSend<CR> " send a whole buffer to shell/repl
+
 let g:molokai_original=1
 colorscheme molokai
 "colorscheme fruity
@@ -75,14 +81,14 @@ vmap <C-Down> ]egv
 nmap <D-Right> :tabNext<cr>
 nmap <D-Left> :tabprevious<cr>
 
-"map ctl-t to command-t
-"map <C-t> :CommandT<cr>
+"map shift-t to command-t
+map <S-t> :CommandT<cr>
 
 " map ,t to run tests with color
 map ,t :w\|:!rspec --color %<cr>
 
 " toggle hlsearch with enter
-noremap <cr> :set hlsearch!<cr>
+" noremap <cr> :set hlsearch!<cr>
 
 if has("gui_running")
   winsize 180 48
