@@ -75,11 +75,16 @@ vmap <C-Down> ]egv
 nmap <D-Right> :tabNext<cr>
 nmap <D-Left> :tabprevious<cr>
 
-"map ctl-t to command-t
-"map <C-t> :CommandT<cr>
+"map shift-t to command-t
+map <S-t> :CommandT<cr>
 
 " map ,t to run tests with color
 map ,t :w\|:!rspec --color %<cr>
+
+" map ,r to run in repl
+map ,r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
+vmap ,r :w !cat > repl-command<cr>:redraw!<cr>
+map ,l :silent.w !cat > repl-command<cr>:redraw!<cr>
 
 " toggle hlsearch with enter
 " noremap <cr> :set hlsearch!<cr>
