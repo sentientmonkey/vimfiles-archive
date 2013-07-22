@@ -82,7 +82,7 @@ nmap <D-Left> :tabprevious<cr>
 map ,t :w\|:!rspec --color %<cr>
 
 " toggle hlsearch with enter
-noremap <cr> :set hlsearch!<cr>
+" noremap <cr> :set hlsearch!<cr>
 
 if has("gui_running")
   winsize 180 48
