@@ -43,12 +43,12 @@
 [submodule "bundle/vim-clojure"]
 	path = bundle/vim-clojure
 	url = https://github.com/vim-scripts/VimClojure
-[submodule "bundle/vim-copy-as-rtf"]
-	path = bundle/vim-copy-as-rtf
-	url = https://github.com/aniero/vim-copy-as-rtf.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundle/vim-log4j"]
+	path = bundle/vim-log4j
+	url = https://github.com/tetsuo13/Vim-log4j.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
