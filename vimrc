@@ -94,3 +94,5 @@ if has("gui_running")
   winpos 100 50
   set showtabline=2
 end
+
+set completefunc=syntaxcomplete#Complete
