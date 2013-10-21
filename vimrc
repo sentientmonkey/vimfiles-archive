@@ -105,3 +105,24 @@ end
 
 set completefunc=syntaxcomplete#Complete
 
+" simple-cov settings
+hi MissLine ctermbg=125
+hi HitLine ctermbg=23
+
+let g:simplecov_enable=0
+
+function! ToggleCoverage()
+  if g:simplecov_enable
+    exe ':Uncov'
+    let g:simplecov_enable=0
+  else
+    exe ':so coverage.vim'
+    hi MissSign ctermfg=125 ctermbg=235
+    hi HitSign ctermfg=23 ctermbg=235
+    sign define hit  linehl=HitLine  texthl=HitSign  text=+
+    sign define miss linehl=MissLine texthl=MissSign text=-
+    let g:simplecov_enable=1
+  endif
+endfunction
+
+map ,c :call ToggleCoverage()<cr>
