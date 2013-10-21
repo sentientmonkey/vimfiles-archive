@@ -86,6 +86,14 @@ map ,r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
 vmap ,r :w !cat > repl-command<cr>:redraw!<cr>
 map ,l :silent.w !cat > repl-command<cr>:redraw!<cr>
 
+" flog settings
+let g:flog_enable=0
+map ,f :call ToggleFlog()<cr>
+let g:flog_low_color_hl        = "term=standout ctermfg=118 ctermbg=235 guifg=#999999 guibg=#323232"
+let g:flog_medium_color_hl     = "term=standout ctermfg=81 ctermbg=235 guifg=#66D9EF guibg=#323232"
+let g:flog_high_color_hl       = "term=standout cterm=bold ctermfg=199 ctermbg=16 gui=bold guifg=#F92672 guibg=#232526"
+" let g:flog_high_limit=20
+
 " toggle hlsearch with enter
 " noremap <cr> :set hlsearch!<cr>
 
@@ -96,3 +104,4 @@ if has("gui_running")
 end
 
 set completefunc=syntaxcomplete#Complete
+
