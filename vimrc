@@ -111,16 +111,22 @@ hi HitLine ctermbg=23
 
 let g:simplecov_enable=0
 
+function! ShowCoverage()
+  exe ':so coverage.vim'
+  hi MissSign ctermfg=125 ctermbg=235
+  hi HitSign ctermfg=23 ctermbg=235
+  sign define hit  linehl=HitLine  texthl=HitSign  text=+
+  sign define miss linehl=MissLine texthl=MissSign text=-
+endfunction
+
 function! ToggleCoverage()
   if g:simplecov_enable
     exe ':Uncov'
+    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb
     let g:simplecov_enable=0
   else
-    exe ':so coverage.vim'
-    hi MissSign ctermfg=125 ctermbg=235
-    hi HitSign ctermfg=23 ctermbg=235
-    sign define hit  linehl=HitLine  texthl=HitSign  text=+
-    sign define miss linehl=MissLine texthl=MissSign text=-
+    call ShowCoverage()
+    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb call ShowCoverage()
     let g:simplecov_enable=1
   endif
 endfunction
