@@ -55,3 +55,6 @@
 [submodule "bundle/vim-screen"]
 	path = bundle/vim-screen
 	url = git://github.com/ervandew/screen.git
+[submodule "bundle/vim-handlebars"]
+	path = bundle/vim-handlebars
+	url = https://github.com/nono/vim-handlebars.git
