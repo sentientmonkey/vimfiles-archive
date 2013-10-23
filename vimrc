@@ -86,6 +86,14 @@ map ,r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
 vmap ,r :w !cat > repl-command<cr>:redraw!<cr>
 map ,l :silent.w !cat > repl-command<cr>:redraw!<cr>
 
+" flog settings
+let g:flog_enable=0
+map ,f :call ToggleFlog()<cr>
+let g:flog_low_color_hl        = "term=standout ctermfg=118 ctermbg=235 guifg=#999999 guibg=#323232"
+let g:flog_medium_color_hl     = "term=standout ctermfg=81 ctermbg=235 guifg=#66D9EF guibg=#323232"
+let g:flog_high_color_hl       = "term=standout cterm=bold ctermfg=199 ctermbg=16 gui=bold guifg=#F92672 guibg=#232526"
+" let g:flog_high_limit=20
+
 " toggle hlsearch with enter
 " noremap <cr> :set hlsearch!<cr>
 
@@ -94,3 +102,33 @@ if has("gui_running")
   winpos 100 50
   set showtabline=2
 end
+
+set completefunc=syntaxcomplete#Complete
+
+" simple-cov settings
+hi MissLine ctermbg=125
+hi HitLine ctermbg=23
+
+let g:simplecov_enable=0
+
+function! ShowCoverage()
+  exe ':so coverage.vim'
+  hi MissSign ctermfg=125 ctermbg=235
+  hi HitSign ctermfg=23 ctermbg=235
+  sign define hit  linehl=HitLine  texthl=HitSign  text=+
+  sign define miss linehl=MissLine texthl=MissSign text=-
+endfunction
+
+function! ToggleCoverage()
+  if g:simplecov_enable
+    exe ':Uncov'
+    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb
+    let g:simplecov_enable=0
+  else
+    call ShowCoverage()
+    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb call ShowCoverage()
+    let g:simplecov_enable=1
+  endif
+endfunction
+
+map ,c :call ToggleCoverage()<cr>

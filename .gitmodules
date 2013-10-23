@@ -55,6 +55,18 @@
 [submodule "bundle/vim-screen"]
 	path = bundle/vim-screen
 	url = git://github.com/ervandew/screen.git
+[submodule "vim-ruby-minitest"]
+	path = vim-ruby-minitest
+	url = https://github.com/sunaku/vim-ruby-minitest
+[submodule "bundle/vim-ruby-minitest"]
+	path = bundle/vim-ruby-minitest
+	url = https://github.com/sunaku/vim-ruby-minitest
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-flog"]
+	path = bundle/vim-flog
+	url = https://github.com/fousa/vim-flog.git
 [submodule "bundle/vim-handlebars"]
 	path = bundle/vim-handlebars
 	url = https://github.com/nono/vim-handlebars.git
