@@ -20,6 +20,9 @@ syntax on
 "  set transp=8
 "end
 
+" set leader
+let mapleader = ","
+
 " 'follow' mode
 nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
@@ -78,17 +81,17 @@ nmap <D-Left> :tabprevious<cr>
 "map shift-t to command-t
 map <S-t> :CommandT<cr>
 
-" map ,t to run tests with color
-map ,t :w\|:!rspec --color %<cr>
+" map <leader>t to run tests with color
+map <leader>t :w\|:!rspec --color %<cr>
 
-" map ,r to run in repl
-map ,r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
-vmap ,r :w !cat > repl-command<cr>:redraw!<cr>
-map ,l :silent.w !cat > repl-command<cr>:redraw!<cr>
+" map <leader>r to run in repl
+map <leader>r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
+vmap <leader>r :w !cat > repl-command<cr>:redraw!<cr>
+map <leader>l :silent.w !cat > repl-command<cr>:redraw!<cr>
 
 " flog settings
 let g:flog_enable=0
-map ,f :call ToggleFlog()<cr>
+map <leader>f :call ToggleFlog()<cr>
 let g:flog_low_color_hl        = "term=standout ctermfg=118 ctermbg=235 guifg=#999999 guibg=#323232"
 let g:flog_medium_color_hl     = "term=standout ctermfg=81 ctermbg=235 guifg=#66D9EF guibg=#323232"
 let g:flog_high_color_hl       = "term=standout cterm=bold ctermfg=199 ctermbg=16 gui=bold guifg=#F92672 guibg=#232526"
@@ -105,30 +108,8 @@ end
 
 set completefunc=syntaxcomplete#Complete
 
-" simple-cov settings
-hi MissLine ctermbg=125
-hi HitLine ctermbg=23
+" edit/reload vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
-let g:simplecov_enable=0
-
-function! ShowCoverage()
-  exe ':so coverage.vim'
-  hi MissSign ctermfg=125 ctermbg=235
-  hi HitSign ctermfg=23 ctermbg=235
-  sign define hit  linehl=HitLine  texthl=HitSign  text=+
-  sign define miss linehl=MissLine texthl=MissSign text=-
-endfunction
-
-function! ToggleCoverage()
-  if g:simplecov_enable
-    exe ':Uncov'
-    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb
-    let g:simplecov_enable=0
-  else
-    call ShowCoverage()
-    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb call ShowCoverage()
-    let g:simplecov_enable=1
-  endif
-endfunction
-
-map ,c :call ToggleCoverage()<cr>
+map <leader>c :call ToggleCoverage()<cr>

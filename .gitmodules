@@ -67,3 +67,6 @@
 [submodule "bundle/vim-flog"]
 	path = bundle/vim-flog
 	url = https://github.com/fousa/vim-flog.git
+[submodule "bundle/vim-coverage"]
+	path = bundle/vim-coverage
+	url = git@github.com:sentientmonkey/vim-coverage.git
