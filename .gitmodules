@@ -64,3 +64,12 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-flog"]
+	path = bundle/vim-flog
+	url = https://github.com/fousa/vim-flog.git
+[submodule "bundle/vim-coverage"]
+	path = bundle/vim-coverage
+	url = git@github.com:sentientmonkey/vim-coverage.git
+[submodule "bundle/vim-handlebars"]
+	path = bundle/vim-handlebars
+	url = https://github.com/nono/vim-handlebars.git
