@@ -73,3 +73,6 @@
 [submodule "bundle/vim-handlebars"]
 	path = bundle/vim-handlebars
 	url = https://github.com/nono/vim-handlebars.git
+[submodule "bundle/vim-tomorrow-theme"]
+	path = bundle/vim-tomorrow-theme
+	url = https://github.com/chriskempson/vim-tomorrow-theme

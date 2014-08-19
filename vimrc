@@ -38,6 +38,7 @@ set shiftwidth=4
 set softtabstop=4
 autocmd FileType ruby :setlocal sw=2 ts=2 sts=2
 autocmd FileType javascript :setlocal sw=2 ts=2 sts=2
+autocmd FileType html :setlocal sw=2 ts=2 sts=2
 set smarttab
 set expandtab
 set noeb
