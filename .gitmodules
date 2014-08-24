@@ -76,3 +76,6 @@
 [submodule "bundle/vim-tomorrow-theme"]
 	path = bundle/vim-tomorrow-theme
 	url = https://github.com/chriskempson/vim-tomorrow-theme
+[submodule "bundle/vim-lldb"]
+	path = bundle/vim-lldb
+	url = https://github.com/gilligan/vim-lldb.git
