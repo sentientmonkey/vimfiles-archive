@@ -85,3 +85,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "bundle/vim-lispy"]
+	path = bundle/vim-lispy
+	url = git@github.com:sentientmonkey/vim-lispy.git
