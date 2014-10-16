@@ -85,6 +85,9 @@ map <S-t> :CommandT<cr>
 " map <leader>t to run tests with color
 map <leader>t :w\|:!rspec --color %<cr>
 
+" map <leader>m for make
+map <leader>m :w\|:!make<cr>
+
 " map <leader>r to run in repl
 map <leader>r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
 vmap <leader>r :w !cat > repl-command<cr>:redraw!<cr>
