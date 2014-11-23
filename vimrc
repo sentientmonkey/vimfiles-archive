@@ -117,3 +117,33 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 map <leader>c :call ToggleCoverage()<cr>
+
+" lispy things
+let g:ScreenImpl='Tmux'
+
+function! s:ScreenShellListener()
+  if g:ScreenShellActive
+    nmap <C-c><C-c> :ScreenSend<cr>
+    nmap <C-c><C-x> :ScreenQuit<cr>
+  else
+    nmap <C-c><C-c> :ScreenShell<cr>
+  endif
+endfunction
+
+nmap <C-c><C-c> :ScreenShell<cr>
+augroup ScreenShellEnter
+  autocmd User * call <SID>ScreenShellListener()
+augroup END
+augroup ScreenShellExit
+  autocmd User * call <SID>ScreenShellListener()
+augroup END
+
+if has("autocmd")
+  au BufReadPost *.rkt,*.rktl set filetype=racket
+  au filetype racket set lisp
+  au filetype racket set autoindent
+  au Syntax scheme RainbowParenthesesLoadRound
+  au Syntax scheme RainbowParenthesesActivate
+  au Syntax racket RainbowParenthesesLoadRound
+  au Syntax racket RainbowParenthesesActivate
+endif

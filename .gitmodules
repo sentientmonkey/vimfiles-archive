@@ -88,3 +88,9 @@
 [submodule "bundle/vim-lispy"]
 	path = bundle/vim-lispy
 	url = git@github.com:sentientmonkey/vim-lispy.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim
+[submodule "bundle/vim-racket"]
+	path = bundle/vim-racket
+	url = https://github.com/wlangstroth/vim-racket
