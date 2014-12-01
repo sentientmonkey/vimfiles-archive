@@ -94,3 +94,6 @@
 [submodule "bundle/vim-racket"]
 	path = bundle/vim-racket
 	url = https://github.com/wlangstroth/vim-racket
+[submodule "bundle/vim-sexp"]
+	path = bundle/vim-sexp
+	url = https://github.com/guns/vim-sexp.git

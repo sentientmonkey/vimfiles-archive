@@ -147,3 +147,7 @@ if has("autocmd")
   au Syntax racket RainbowParenthesesLoadRound
   au Syntax racket RainbowParenthesesActivate
 endif
+
+nmap <C-C><C-F> v<Plug>(sexp_outer_top_list):ScreenSend<CR>
+nmap <C-C><C-E> :.:ScreenSend<CR>
+
