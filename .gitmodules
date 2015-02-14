@@ -97,3 +97,6 @@
 [submodule "bundle/vim-sexp"]
 	path = bundle/vim-sexp
 	url = https://github.com/guns/vim-sexp.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = git@github.com:fatih/vim-go.git

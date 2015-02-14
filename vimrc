@@ -50,7 +50,9 @@ set number
 
 " show real tabs and trailing whitespace (so we can destroy them!)
 set list
-set listchars:tab:->,trail:·
+set listchars:tab:»·,trail:·
+" allow tabs in go.
+autocmd FileType go :setlocal nolist
 match Error /\s\+$/
 
 if has("gui_macvim")
