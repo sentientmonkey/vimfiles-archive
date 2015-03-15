@@ -86,8 +86,9 @@ nmap <D-Left> :tabprevious<cr>
 "map shift-t to command-t
 map <S-t> :CommandT<cr>
 
-" map <leader>t to run tests with color
-map <leader>t :w\|:!rspec --color %<cr>
+" map <leader>t to run tests
+autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
+autocmd FileType go :map <leader>t :GoTest<cr>
 
 " map <leader>m for make
 map <leader>m :w\|:!make<cr>
