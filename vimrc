@@ -91,7 +91,7 @@ autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
 autocmd FileType go :map <leader>t :GoTest<cr>
 
 " map <leader>m for make
-map <leader>m :w\|:!make<cr>
+map <leader>m :w\|:Make<cr>
 
 " map <leader>r to run in repl
 map <leader>r :w\|:silent !cat % > repl-command<cr>:redraw!<cr>
