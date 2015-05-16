@@ -26,7 +26,7 @@ let maplocalleader = ","
 
 
 " 'follow' mode
-nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
+"nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
 " Load matchit (% to bounce from do to end, etc.)
 " runtime! macros/matchit.vim
@@ -147,6 +147,12 @@ if has("autocmd")
   au BufReadPost *.rkt,*.rktl set filetype=racket
   au filetype racket set lisp
   au filetype racket set autoindent
+  " reasoned schemer stuff
+  au filetype racket set lispwords+=run*,run,fresh,conde
+  au filetype racket syn keyword racketFunc nullo pairo cdro conso caro conde ==
+  au filetype racket syn keyword racketSyntax run run* fresh conde else
+  au filetype racket syn keyword racketBoolean s# u#
+  " end reasoned schemer stuff
   au Syntax scheme RainbowParenthesesLoadRound
   au Syntax scheme RainbowParenthesesActivate
   au Syntax racket RainbowParenthesesLoadRound
@@ -174,3 +180,5 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+
+
