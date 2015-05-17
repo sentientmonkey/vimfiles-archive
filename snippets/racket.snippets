@@ -1,0 +1,33 @@
+snippet def
+	(define (${1})
+	  ${2})
+snippet lambda
+	(lambda (${1})
+	  ${2})
+snippet ce
+	(check-equal? ${1} ${2})
+snippet ct
+	(check-true ${1} ${2})
+snippet cf
+	(check-false ${1} ${2})
+snippet cond
+	(cond
+	  [${1} ${2}]
+	  [else ${3}])
+
+# reasoned schemer snippets
+snippet fresh
+	(fresh (${1})
+	  ${2})
+snippet conde
+	(conde
+	  [${1} ${2}]
+	  [else ${3}])
+snippet cr*
+	(check-run* (${1})
+	            ${2}
+	            => ${3})
+snippet cr
+	(check-run ${1} (${2})
+	           ${3}
+	           => ${4})

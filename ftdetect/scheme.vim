@@ -1,0 +1,2 @@
+au Syntax scheme RainbowParenthesesLoadRound
+au Syntax scheme RainbowParenthesesActivate
