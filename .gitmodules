@@ -106,3 +106,6 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/mediawiki"]
+	path = bundle/mediawiki
+	url = git://github.com/chikamichi/mediawiki.vim.git
