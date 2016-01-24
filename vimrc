@@ -48,29 +48,6 @@ set number
 " show real tabs and trailing whitespace (so we can destroy them!)
 set list
 set listchars:tab:»·,trail:·
-" allow tabs in go.
-autocmd FileType go :setlocal nolist
-
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
 
 match Error /\s\+$/
 
@@ -107,7 +84,6 @@ map <S-t> :CommandT<cr>
 
 " map <leader>t to run tests
 autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
-autocmd FileType go :map <leader>t :GoTest<cr>
 
 " map <leader>m for make
 map <leader>m :w\|:Make<cr>
@@ -164,7 +140,6 @@ augroup END
 
 nmap <C-C><C-F> v<Plug>(sexp_outer_top_list):ScreenSend<CR>
 nmap <C-C><C-E> :.:ScreenSend<CR>
-
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
