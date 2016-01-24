@@ -2,9 +2,6 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-
 let g:molokai_original=1
 colorscheme molokai
 "colorscheme fruity

@@ -109,3 +109,12 @@
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = git://github.com/chikamichi/mediawiki.vim.git
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-classpath"]
+	path = bundle/vim-classpath
+	url = git@github.com:tpope/vim-classpath.git
+[submodule "bundle/vim-salve"]
+	path = bundle/vim-salve
+	url = git://github.com/tpope/vim-salve.git
