@@ -108,7 +108,7 @@
 	url = git://github.com/chikamichi/mediawiki.vim.git
 [submodule "bundle/vim-fireplace"]
 	path = bundle/vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
+	url = git@github.com:sentientmonkey/vim-fireplace.git
 [submodule "bundle/vim-classpath"]
 	path = bundle/vim-classpath
 	url = git@github.com:tpope/vim-classpath.git
