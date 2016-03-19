@@ -1,5 +1,5 @@
 set nocompatible
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 let g:molokai_original=1
@@ -158,5 +158,3 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
-
-
