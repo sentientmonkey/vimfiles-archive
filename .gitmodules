@@ -115,3 +115,6 @@
 [submodule "bundle/vim-salve"]
 	path = bundle/vim-salve
 	url = git://github.com/tpope/vim-salve.git
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
