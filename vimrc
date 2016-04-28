@@ -82,6 +82,9 @@ nmap <D-Left> :tabprevious<cr>
 "map shift-t to command-t
 map <S-t> :CommandT<cr>
 
+" map <leader>o to toggle tagbar
+map <leader>o :TagbarToggle<cr>
+
 " map <leader>t to run tests
 autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
 
