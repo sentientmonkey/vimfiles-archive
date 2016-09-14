@@ -170,3 +170,6 @@ function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
 set statusline+=%{SyntaxItem()}
+
+let g:rustfmt_autosave = 1
+set hidden

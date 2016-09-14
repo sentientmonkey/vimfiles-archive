@@ -133,3 +133,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/vim-cargo"]
+	path = bundle/vim-cargo
+	url = https://github.com/timonv/vim-cargo.git
