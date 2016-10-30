@@ -133,3 +133,6 @@
 [submodule "bundle/vim-cargo"]
 	path = bundle/vim-cargo
 	url = https://github.com/timonv/vim-cargo.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
