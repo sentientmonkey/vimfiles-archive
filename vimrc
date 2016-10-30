@@ -162,7 +162,8 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-inoremap <C-Space> <C-x><C-o>
+inoremap <Ctrl-Space> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
 imap <buffer> <Nul> <C-Space>
 smap <buffer> <Nul> <C-Space>
 
