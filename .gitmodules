@@ -121,9 +121,6 @@
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/vim-cargo"]
 	path = bundle/vim-cargo
 	url = https://github.com/timonv/vim-cargo.git
