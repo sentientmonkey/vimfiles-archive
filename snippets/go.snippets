@@ -1,0 +1,19 @@
+snippet json
+	\`json:"${1:`go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`
+
+snippet yaml
+	\`yaml:"${1:`go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`
+
+snippet xml
+	\`xml:"${1:`go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`
+
+snippet import
+	import (
+		"${1:package}"
+	)
+
+snippet test test function
+	func Test${1:name}(t *testing.T) {
+		${2}
+	}
+	${0}
