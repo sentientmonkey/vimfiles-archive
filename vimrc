@@ -1,6 +1,4 @@
 set nocompatible
-call pathogen#infect()
-call pathogen#helptags()
 
 let g:molokai_original=1
 colorscheme molokai
