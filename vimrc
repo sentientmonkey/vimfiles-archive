@@ -17,9 +17,9 @@ syntax on
 
 " set leader
 let mapleader = ","
+
+
 let maplocalleader = ","
-
-
 " 'follow' mode
 "nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
@@ -40,15 +40,15 @@ set smarttab
 set expandtab
 set noeb
 set guifont=Monaco\ 10
-set laststatus=2
 set number
 
 " show real tabs and trailing whitespace (so we can destroy them!)
 set list
-set listchars:tab:»·,trail:·
+set laststatus=2
 
 match Error /\s\+$/
 
+set listchars:tab:»·,trail:·
 if has("gui_macvim")
   set guifont=Monaco:h12
 end
@@ -60,7 +60,7 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 let g:rails_ctags_arguments="--exclude='*.*.js'"
 
 " set statusline=%f[%{GitBranch()}]%#StatusLine#
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}\ %#StatusLine#%=%-14.(%l,%c%V%)\ %P
+set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}\ %#StatusLine#%=%-14.(%l,%c%V%)\ %P
 
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
@@ -84,7 +84,7 @@ map <S-t> :CommandT<cr>
 map <leader>o :TagbarToggle<cr>
 
 " map <leader>t to run tests
-autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
+" autocmd FileType ruby :map <leader>t :w\|:!rspec --color %<cr>
 
 " map <leader>m for make
 map <leader>m :w\|:Make<cr>
@@ -170,5 +170,17 @@ function! SyntaxItem()
 endfunction
 set statusline+=%{SyntaxItem()}
 
+set statusline+=%#goStatuslineColor#
+set statusline+=%{go#statusline#Show()}
+set statusline+=%*
+let g:go_term_enabled = 1
+
 let g:rustfmt_autosave = 1
 set hidden
+
+" vim-test defaults
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>

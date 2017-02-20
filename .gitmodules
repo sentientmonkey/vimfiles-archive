@@ -37,9 +37,6 @@
 [submodule "bundle/vim-clojure"]
 	path = pack/plugins/start/vim-clojure
 	url = https://github.com/vim-scripts/VimClojure
-[submodule "bundle/command-t"]
-	path = pack/plugins/start/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "bundle/vim-log4j"]
 	path = pack/plugins/start/vim-log4j
 	url = https://github.com/tetsuo13/Vim-log4j.git
@@ -121,9 +118,9 @@
 [submodule "bundle/vim-toml"]
 	path = pack/plugins/start/vim-toml
 	url = https://github.com/cespare/vim-toml.git
-[submodule "bundle/vim-cargo"]
-	path = pack/plugins/start/vim-cargo
-	url = https://github.com/timonv/vim-cargo.git
 [submodule "bundle/nerdtree"]
 	path = pack/plugins/start/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule "pack/plugins/start/vim-test"]
+	path = pack/plugins/start/vim-test
+	url = https://github.com/janko-m/vim-test.git
