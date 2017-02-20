@@ -55,9 +55,6 @@
 [submodule "bundle/vim-markdown"]
 	path = pack/plugins/start/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "bundle/vim-flog"]
-	path = pack/plugins/start/vim-flog
-	url = https://github.com/fousa/vim-flog.git
 [submodule "bundle/vim-coverage"]
 	path = pack/plugins/start/vim-coverage
 	url = git@github.com:sentientmonkey/vim-coverage.git
@@ -124,3 +121,9 @@
 [submodule "pack/plugins/start/vim-test"]
 	path = pack/plugins/start/vim-test
 	url = https://github.com/janko-m/vim-test.git
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/plugins/start/vim-flog"]
+	path = pack/plugins/start/vim-flog
+	url = https://github.com/fousa/vim-flog.git
