@@ -1,12 +1,13 @@
 set nocompatible
 
-let g:molokai_original=1
+"let g:molokai_original=1
 colorscheme molokai
 "colorscheme fruity
-"set bg=dark 
-"let g:solarized_termcolors=256
-"let g:solarized_contrast="high"
+let g:solarized_termcolors=256
 "colorscheme solarized
+colorscheme Tomorrow-Night-Eighties
+
+set background=dark
 syntax on
 " set smartindent
 
@@ -184,3 +185,6 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+let g:haddock_browser="/usr/bin/open"
+au BufEnter *.hs compiler ghc
