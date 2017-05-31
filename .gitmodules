@@ -127,3 +127,9 @@
 [submodule "pack/plugins/start/vim-flog"]
 	path = pack/plugins/start/vim-flog
 	url = https://github.com/fousa/vim-flog.git
+[submodule "pack/plugins/start/vim-cargo"]
+	path = pack/plugins/start/vim-cargo
+	url = https://github.com/timonv/vim-cargo.git
+[submodule "pack/plugins/start/vim-racer"]
+	path = pack/plugins/start/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git

@@ -1,14 +1,15 @@
 set nocompatible
 
+set background=dark
+syntax on
+
 "let g:molokai_original=1
-colorscheme molokai
+"colorscheme molokai
 "colorscheme fruity
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "colorscheme solarized
 colorscheme Tomorrow-Night-Eighties
 
-set background=dark
-syntax on
 " set smartindent
 
 " transparency effect for macvim
@@ -176,15 +177,22 @@ set statusline+=%{go#statusline#Show()}
 set statusline+=%*
 let g:go_term_enabled = 1
 
-let g:rustfmt_autosave = 1
-set hidden
-
 " vim-test defaults
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+let test#strategy = "dispatch"
 
 let g:haddock_browser="/usr/bin/open"
 au BufEnter *.hs compiler ghc
+
+" Rust
+let g:rustfmt_autosave = 1
+set hidden
+let g:racer_cmd = "/Users/scott/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+" First letter of runner's name must be uppercase
+let test#runners = {'racket': ['raco']}
